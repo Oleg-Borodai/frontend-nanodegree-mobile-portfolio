@@ -30,7 +30,8 @@ Some useful tips to help you get started:
 
 Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
-### Files after minified and prepared after grunt build files are available in build folder
+### Built version
+Minified and prepared files after grunt build are available in build folder
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
