@@ -32,9 +32,14 @@ Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+
+###Completed optimizations
+* updatePositions function was changed to avoid FSL and querying DOM for list of pizzas on each run
+* Total number of moving pizzas changed to 40, that is enough to cover the screen on most resolutions
+* To improve pizzas resizing speed changePizzaSizes function was changed to avoid FSL. Also Size calculation algorithm was simplified, determineDx function was removed still recieving same 3 possible pizza sizes.
 
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
