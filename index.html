@@ -8,15 +8,35 @@
     <title>Cameron Pittman: Portfolio</title>
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" media="screen and (min-width: 600px)">
+    <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" media="screen and (min-width: 600px)"> -->
 
-    <link href="css/style.css" rel="stylesheet" media="screen and (min-width: 600px)">
+    <!-- <link href="css/style.css" rel="stylesheet" media="screen and (min-width: 600px)"> -->
     <link href="css/print.css" rel="stylesheet" media="print">
     <style>
+      body {margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400;
+            font-family: 'Open Sans', sans-serif; color: #333;}
+
+      ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
       .content { padding: 1em 1em; }
       .content li { list-style-type: none; font-size: 1.1em;}
       li img { float:left; padding-right: 1em; }
       li p { font-size: 0.9em; font-style: italic; }
+
+      a { color: #12C; }
+      a:visited { color: #61C; }
+      a:focus { outline: thin dotted; }
+      a:hover, a:active { color: #c00; outline: 0; }
+
+      b, strong { font-weight: bold; }
+
+      header, footer, .container { max-width: 45em; margin: 0 auto; }
+      header {padding: 0 0.5em; color: #C90B0B;}
+
+      footer {
+        padding: 0 0.5em;
+        border-top: 1px solid #ccc;
+      }
+      footer span { float: right; font-style: italic; }
     </style>
 <!--
     <script>
@@ -32,7 +52,7 @@
   </head>
 
   <body>
-    <header style="padding: 0 0.5em; color: #C90B0B;">
+    <header>
       <a href="/"><img src="img/profilepic.jpg" style="border-radius: 40px; float: left;"></a>
       <p style="font-size:1.5em; font-weight: bold; padding-left: 4em;">Cameron Pittman<br><span >Course Developer</span></p>
     </header>
