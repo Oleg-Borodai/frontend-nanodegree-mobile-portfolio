@@ -438,8 +438,8 @@ var resizePizzas = function(size) {
   // Iterates through pizza elements on the page and changes their widths
   // This function was refactored to avoid FSL and improve pizza resizing speed
   function changePizzaSizes(size) {
-    var pizzaContainer = document.querySelectorAll(".randomPizzaContainer")
-    for (var i = 0; i < pizzaContainer.length; i++) {
+    var pizzaContainer = document.getElementsByClassName("randomPizzaContainer")
+    for (var i = 0, len = pizzaContainer.length; i < len ; i++) {
       pizzaContainer[i].style.width = sizeSwitcher(size);
     }
   }
@@ -456,8 +456,8 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -519,16 +519,18 @@ document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
   //I have changed number of moving pizzas that is enough to cover the screen
+  var elem;
+  var movingPizzas1 = document.getElementById("movingPizzas1");
   for (var i = 0; i < 40; i++) {
-    var elem = document.createElement('img');
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    document.querySelector("#movingPizzas1").appendChild(elem);
+    movingPizzas1.appendChild(elem);
   }
-  items = document.querySelectorAll('.mover');
+  items = document.getElementsByClassName('mover');
   updatePositions();
 });
